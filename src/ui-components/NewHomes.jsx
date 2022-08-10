@@ -6,7 +6,7 @@
 
 /* eslint-disable */
 import React from "react";
-import { Home } from "../models";
+import { MedicalInformation } from "../models";
 import {
   getOverrideProps,
   useDataStoreBinding,
@@ -17,27 +17,24 @@ export default function NewHomes(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
-    model: Home,
+    model: MedicalInformation,
   }).items;
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (
     <Collection
-      type="grid"
+      type="list"
       searchPlaceholder="Search..."
-      itemsPerPage={6}
-      templateColumns="1fr 1fr 1fr"
-      autoFlow="row"
+      direction="row"
       alignItems="stretch"
-      justifyContent="stretch"
       items={items || []}
       {...rest}
       {...getOverrideProps(overrides, "NewHomes")}
     >
       {(item, index) => (
         <Homecard
-          home={item}
-          height="1500px"
-          width="2000px"
+          MI={item}
+          height="auto"
+          width="auto"
           margin="10px 10px 10px 10px"
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}

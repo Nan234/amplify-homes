@@ -9,33 +9,33 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Image, Text, View } from "@aws-amplify/ui-react";
 export default function Homecard(props) {
-  const { home, overrides, ...rest } = props;
+  const { MI, overrides, ...rest } = props;
   return (
     <Flex
       gap="34px"
       direction="column"
-      width="1931px"
-      height="1215px"
+      width="640px"
+      height="818px"
       overflow="hidden"
       position="relative"
       borderRadius="45px"
-      padding="0px 151px 0px 0px"
+      padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "Homecard")}
     >
       <Image
-        width="1920px"
-        height="777px"
+        width="640px"
+        height="480px"
         shrink="0"
         position="relative"
         padding="0px 0px 0px 0px"
-        src={home?.image_url}
-        {...getOverrideProps(overrides, "IMG_5391 1")}
+        src={MI?.Image_Name}
+        {...getOverrideProps(overrides, "2022-08-03+13_39_24 1")}
       ></Image>
       <View
-        width="1920px"
-        height="358px"
+        width="640px"
+        height="247px"
         shrink="0"
         overflow="hidden"
         position="relative"
@@ -44,23 +44,23 @@ export default function Homecard(props) {
       >
         <Text
           fontFamily="Inter"
-          fontSize="48px"
+          fontSize="20px"
           fontWeight="400"
           color="rgba(0,0,0,1)"
-          lineHeight="56.25px"
+          lineHeight="23.4375px"
           textAlign="left"
           display="flex"
           direction="column"
-          justifyContent="flex-start"
-          width="1922px"
-          height="259px"
+          justifyContent="center"
+          width="360px"
+          height="66px"
           position="absolute"
-          top="29px"
-          left="-1px"
+          top="89px"
+          left="280px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children={home?.address}
-          {...getOverrideProps(overrides, "Title")}
+          children={MI?.Med_Time}
+          {...getOverrideProps(overrides, "Description5")}
         ></Text>
         <Text
           fontFamily="Inter"
@@ -71,16 +71,96 @@ export default function Homecard(props) {
           textAlign="left"
           display="flex"
           direction="column"
-          justifyContent="flex-start"
-          width="1920px"
-          height="116px"
+          justifyContent="center"
+          width="360px"
+          height="153px"
           position="absolute"
-          top="171px"
+          top="94px"
+          left="280px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children={MI?.Results}
+          {...getOverrideProps(overrides, "Description4")}
+        ></Text>
+        <Text
+          fontFamily="Inter"
+          fontSize="40px"
+          fontWeight="400"
+          color="rgba(26,188,254,1)"
+          lineHeight="46.875px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="center"
+          width="640px"
+          height="51px"
+          position="absolute"
+          top="196px"
           left="0px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children={`${"Price:$"}${home?.price}${"/night"}`}
-          {...getOverrideProps(overrides, "Description")}
+          children={`${"Blue:"}${MI?.Med_Blue}`}
+          {...getOverrideProps(overrides, "Description3")}
+        ></Text>
+        <Text
+          fontFamily="Inter"
+          fontSize="40px"
+          fontWeight="400"
+          color="rgba(214,193,7,1)"
+          lineHeight="46.875px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="center"
+          width="640px"
+          height="51px"
+          position="absolute"
+          top="145px"
+          left="0px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children={`${"Yellow:"}${MI?.Med_Yellow}`}
+          {...getOverrideProps(overrides, "Description2")}
+        ></Text>
+        <Text
+          fontFamily="Inter"
+          fontSize="40px"
+          fontWeight="400"
+          color="rgba(242,78,30,1)"
+          lineHeight="46.875px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="center"
+          width="640px"
+          height="51px"
+          position="absolute"
+          top="94px"
+          left="0px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children={`${"Red:"}${MI?.Med_Red}`}
+          {...getOverrideProps(overrides, "Description1")}
+        ></Text>
+        <Text
+          fontFamily="Inter"
+          fontSize="40px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="46.875px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="center"
+          width="642px"
+          height="66px"
+          position="absolute"
+          top="-1px"
+          left="-1px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children={MI?.Dev_ID}
+          {...getOverrideProps(overrides, "Title")}
         ></Text>
       </View>
     </Flex>

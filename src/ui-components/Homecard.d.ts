@@ -5,11 +5,11 @@
  **************************************************************************/
 
 import React from "react";
-import { Home } from "../models";
+import { MedicalInformation } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type HomecardProps = React.PropsWithChildren<Partial<FlexProps> & {
-    home?: Home;
+    MI?: MedicalInformation;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
